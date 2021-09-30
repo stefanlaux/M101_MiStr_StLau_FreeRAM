@@ -30,7 +30,16 @@
     <link rel="stylesheet" href="../productdetails.css" />
     <title>Product Details</title>
   </head>
-  <body>
+  <body onload="load()">
+    <script>
+      function load(){
+              var dots = document.getElementById("dots");
+              document.getElementById("more").style.display = "none";
+              var btnText = document.getElementById("myBtn");
+              dots.style.display = "inline";
+              btnText.innerHTML = "Show";
+      }
+    </script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../../../../../../../index/index.html"
@@ -168,6 +177,8 @@
       </div>
       <br />
 
+      <br />
+
       <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
@@ -176,22 +187,22 @@
             class="text"
             style="color: beige; padding-left: 1%; padding-right: 1%"
           >
-          The crystalline light bar features a crown jewel design and
-          has been carefully crafted to get just the right refraction
-          to display. It scatters RGB colors in a great way
-          LED lighting.<span class="dots"> ...</span>
+            The crystalline light bar features a crown jewel design and has been
+            carefully crafted to get just the right refraction to display. It
+            scatters RGB colors in a great way LED lighting.<span class="dots">
+              ...</span
+            >
             <span
               class="moreText"
               style="color: beige; padding-left: 1%; padding-right: 1%"
             >
-            Polished aluminum heat spreader in gold or silver colors
-            reflect the high-quality light bar design and cool the
-            Memory modules in the classic Trident Z-Tri-Fin design.
-            Uniquely designed to take light from the 8 RGB LED zones on each
-            Module to scatter and break, and offers a great
-            Illumination display in your PC case. There is also the RAM
-            Free to download, it is compatible with the online DDR4
-            Slots. This RAM turns your PC into a real beast.</span
+              Polished aluminum heat spreader in gold or silver colors reflect
+              the high-quality light bar design and cool the Memory modules in
+              the classic Trident Z-Tri-Fin design. Uniquely designed to take
+              light from the 8 RGB LED zones on each Module to scatter and
+              break, and offers a great Illumination display in your PC case.
+              There is also the RAM Free to download, it is compatible with the
+              online DDR4 Slots. This RAM turns your PC into a real beast.</span
             >
           </p>
           <button class="read-more-btn">Read More</button>
@@ -222,70 +233,74 @@
           card.classList.toggle("active");
         }
       </script>
-<br>
-<div class="row">
-<div class="col-lg-3"></div>
-<hr class="col-lg-6" style="color: beige;">
-<div class="col-lg-3"></div>
-</div>
 
+      <br />
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <h2 style="color: beige" class="col-lg-6">
+          Specifications
+        </h2>
+        <div class="col-lg-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <p style="color: beige">
 
-<div class="row">
-  <div class="col-lg-3"></div>
-  <div class="col-lg-6">
-    <h1 style="color: beige">Specifications</h1>
-    <p
-      class="text"
-      style="color: beige; padding-left: 1%; padding-right: 1%"
-    >
-   <span class="dots"></span>
-      <span
-        class="moreText"
-        style="color: beige; padding-left: 1%; padding-right: 1%"
-      >
-     </span
-      >
-    </p>
-    <button class="read-more-btn">Show</button>
-  </div>
-  <div class="col-lg-3">Memory type	
-    DDR4-RAM</div>
-</div>
-<script>
-  const readMoreBtn = document.querySelector(".read-more-btn");
-  const text = document.querySelector(".text");
+            <span id="dots"><hr style="color: beige;"></span>
+            <span id="more">      <pre style="color: beige;">
+Memory type                                                                 DDR4-RAM
+            <hr>
+Manufacturer                                                                G.Skill
+            <hr>
+Item number	                                                            14448659
+            <hr>
+Manufacturer no.                                                            F4-3200C14Q-128GTRG
+            <hr>
+Case colour	                                                            Gold, Silver
+            <hr>  
+LED colour                                                                  RGB
+            <hr>   
+Memory configuration                                                        4 x 32GB
+            <hr>   
+Memory type	                                                            DDR4-RAM
+            <hr>   
+Storage capacity (RAM) per module	                                    32 GB
+            <hr> 
+            
+             </pre>
+        </span
+            >
+          </p>
 
-  readMoreBtn.addEventListener("click", (e) => {
-    text.classList.toggle("show-more");
-    if (readMoreBtn.innerText === "Read More") {
-      readMoreBtn.innerText = "Read Less";
-    } else {
-      readMoreBtn.innerText = "Read More";
-    }
-  });
-
-  const touchButton = document.querySelector(".float-text");
-  const card = document.querySelector(".float-card-info");
-  const close = document.querySelector(".gg-close-r");
-
-  touchButton.addEventListener("click", moveCard);
-  close.addEventListener("click", moveCard);
-
-  function moveCard() {
-    card.classList.toggle("active");
-  }
-</script>
-
-
-
-
-
-
-        <div style="text-align: center;">
-          <button>
-            Download free RAM <br> (Invest)
-          </button>
+          <button class="read-more-btn" style="font-size: 10px;" onclick="myFunction()" id="myBtn">Show</button>
         </div>
+      </div>
+      <div class="col-lg-3"></div>
+      <script>
+        function myFunction() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Show";
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Hide";
+            moreText.style.display = "inline";
+          }
+        }
+      </script>
+
+      <div style="text-align: center">
+        <button style="background-color: red;">
+          Download free RAM <br />
+          (Invest)
+        </button>
+      </div>
 
 
     </header>
