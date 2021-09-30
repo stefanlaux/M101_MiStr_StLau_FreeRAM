@@ -5,11 +5,11 @@
 body {
     font: 100%/1.5 Arial;
   background:#3d3d3d ;
-  color:rgb(235,236,238) ;
+  color:rgb(0, 0, 0) ;
 }
 .jumbotron{
   margin-bottom:0 !important;
-  background:rgba(255,255,255,.9) !important;
+  background:rgba(100, 100, 100, 0.9) !important;
 }
 .fluid_container{
   background:;
@@ -35,12 +35,13 @@ body {
     left: 0;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 100%;
 }
 
 .parallax__layer--base {
     transform: translateZ(0px);
     z-index: 4;
+    background: #3d3d3d;
 }
 .parallax__layer--back {
     transform: translateZ(-300px) scale(2);
@@ -53,17 +54,28 @@ body, html {
 .parallax {
     font-size: 100%;
 }
-img.codepen_image {
+img.image {
     left: 50%;
     position: absolute;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -65%);
-    width:90%;
+    height: 150%;
+
+    
+    
 }
 #group1 {
     z-index: 3;
-    height:70%;
+    height:40%;
 }
 #group1 .parallax__layer--back {
+}
+
+.background_parallax{
+    background: #131313;
+}
+
+.container{
+    background: #3d3d3d;
 }
