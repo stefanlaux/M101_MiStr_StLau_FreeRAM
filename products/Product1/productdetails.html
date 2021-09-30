@@ -32,12 +32,12 @@
   </head>
   <body onload="load()">
     <script>
-      function load(){
-              var dots = document.getElementById("dots");
-              document.getElementById("more").style.display = "none";
-              var btnText = document.getElementById("myBtn");
-              dots.style.display = "inline";
-              btnText.innerHTML = "Show";
+      function load() {
+        var dots = document.getElementById("dots");
+        document.getElementById("more").style.display = "none";
+        var btnText = document.getElementById("myBtn");
+        dots.style.display = "inline";
+        btnText.innerHTML = "Show";
       }
     </script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -237,18 +237,16 @@
       <br />
       <div class="row">
         <div class="col-lg-3"></div>
-        <h2 style="color: beige" class="col-lg-6">
-          Specifications
-        </h2>
+        <h2 style="color: beige" class="col-lg-6">Specifications</h2>
         <div class="col-lg-3"></div>
       </div>
       <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
           <p style="color: beige">
-
-            <span id="dots"><hr style="color: beige;"></span>
-            <span id="more">      <pre style="color: beige;">
+            <span id="dots"><hr style="color: beige" /></span>
+            <span id="more">
+              <pre style="color: beige">
 Memory type                                                                 DDR4-RAM
             <hr>
 Manufacturer                                                                G.Skill
@@ -266,14 +264,18 @@ Memory configuration                                                        4 x 
 Memory type	                                                            DDR4-RAM
             <hr>   
 Storage capacity (RAM) per module	                                    32 GB
-            <hr> 
-            
-             </pre>
-        </span
-            >
+            <hr>  </pre>
+            </span>
           </p>
 
-          <button class="read-more-btn" style="font-size: 10px;" onclick="myFunction()" id="myBtn">Show</button>
+          <button
+            class="read-more-btn"
+            style="font-size: 10px"
+            onclick="myFunction()"
+            id="myBtn"
+          >
+            Show
+          </button>
         </div>
       </div>
       <div class="col-lg-3"></div>
@@ -296,13 +298,10 @@ Storage capacity (RAM) per module	                                    32 GB
       </script>
 
       <div style="text-align: center">
-        <button style="background-color: red;">
-          Download free RAM <br />
-          (Invest)
-        </button>
+        
+          <a href="http://downloadramdownloadramdownloadram.com/"><button style="background-color: red">Download free RAM <br/>(Invest)</button></a>
+        
       </div>
-
-
     </header>
   </body>
 </html>
