@@ -222,7 +222,70 @@
           card.classList.toggle("active");
         }
       </script>
+<br>
+<div class="row">
+<div class="col-lg-3"></div>
+<hr class="col-lg-6" style="color: beige;">
+<div class="col-lg-3"></div>
+</div>
 
+
+<div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6">
+    <h1 style="color: beige">Specifications</h1>
+    <p
+      class="text"
+      style="color: beige; padding-left: 1%; padding-right: 1%"
+    >
+   <span class="dots"></span>
+      <span
+        class="moreText"
+        style="color: beige; padding-left: 1%; padding-right: 1%"
+      >
+     </span
+      >
+    </p>
+    <button class="read-more-btn">Show</button>
+  </div>
+  <div class="col-lg-3">Memory type	
+    DDR4-RAM</div>
+</div>
+<script>
+  const readMoreBtn = document.querySelector(".read-more-btn");
+  const text = document.querySelector(".text");
+
+  readMoreBtn.addEventListener("click", (e) => {
+    text.classList.toggle("show-more");
+    if (readMoreBtn.innerText === "Read More") {
+      readMoreBtn.innerText = "Read Less";
+    } else {
+      readMoreBtn.innerText = "Read More";
+    }
+  });
+
+  const touchButton = document.querySelector(".float-text");
+  const card = document.querySelector(".float-card-info");
+  const close = document.querySelector(".gg-close-r");
+
+  touchButton.addEventListener("click", moveCard);
+  close.addEventListener("click", moveCard);
+
+  function moveCard() {
+    card.classList.toggle("active");
+  }
+</script>
+
+
+
+
+
+
+        <div style="text-align: center;">
+          <button>
+            Download free RAM <br> (Invest)
+          </button>
+        </div>
 
 
     </header>
