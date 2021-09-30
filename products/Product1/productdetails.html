@@ -33,7 +33,9 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index/index.html">FreeRAM |</a>
+        <a class="navbar-brand" href="../../../../../../../index/index.html"
+          >FreeRAM |</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -56,13 +58,15 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../index/index.html">Home</a>
+              <a class="nav-link" href="../../../../../index/index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../products.html">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about/aboutfreeram.html"
+              <a class="nav-link" href="../../../../../about/aboutfreeram.html"
                 >About FreeRAM</a
               >
             </li>
@@ -163,26 +167,61 @@
         </div>
       </div>
       <br />
+
       <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-          <h1 style="color: beige">Beschreibung</h1>
-          <p style="color: beige">
-            Der kristalline Lichtbalken verfügt über ein Kronjuwel-Design und
-            wurde sorgfältig verarbeitet, um genau die richtige Lichtbrechung
-            anzuzeigen. Er streut RGB-Farben in einer grossartigen
-            LED-Beleuchtung. Polierte Aluminium-Wärmeverteiler in Gold- oder
-            Silberfarben spiegeln das hochwertige Lichtbalken-Design wider und
-            kühlen die Speichermodule im klassischen Trident Z-Tri-Fin-Design.
-            Einzigartig entwickelt, um Licht von den 8 RGB-LED-Zonen auf jedem
-            Modul zu streuen und zu brechen, und bietet eine grossartige
-            Beleuchtungsanzeige in Ihrem PC-Gehäuse. Den RAM gibt es auch
-            Kostenlos zum Downloaden er ist kompatibel mit den Online DDR4
-            Slots. Dieser RAM mach dein PC zu einem richtigen Biest.
+          <h1 style="color: beige">Description</h1>
+          <p
+            class="text"
+            style="color: beige; padding-left: 1%; padding-right: 1%"
+          >
+          The crystalline light bar features a crown jewel design and
+          has been carefully crafted to get just the right refraction
+          to display. It scatters RGB colors in a great way
+          LED lighting.<span class="dots"> ...</span>
+            <span
+              class="moreText"
+              style="color: beige; padding-left: 1%; padding-right: 1%"
+            >
+            Polished aluminum heat spreader in gold or silver colors
+            reflect the high-quality light bar design and cool the
+            Memory modules in the classic Trident Z-Tri-Fin design.
+            Uniquely designed to take light from the 8 RGB LED zones on each
+            Module to scatter and break, and offers a great
+            Illumination display in your PC case. There is also the RAM
+            Free to download, it is compatible with the online DDR4
+            Slots. This RAM turns your PC into a real beast.</span
+            >
           </p>
+          <button class="read-more-btn">Read More</button>
         </div>
         <div class="col-lg-3"></div>
       </div>
+      <script>
+        const readMoreBtn = document.querySelector(".read-more-btn");
+        const text = document.querySelector(".text");
+
+        readMoreBtn.addEventListener("click", (e) => {
+          text.classList.toggle("show-more");
+          if (readMoreBtn.innerText === "Read More") {
+            readMoreBtn.innerText = "Read Less";
+          } else {
+            readMoreBtn.innerText = "Read More";
+          }
+        });
+
+        const touchButton = document.querySelector(".float-text");
+        const card = document.querySelector(".float-card-info");
+        const close = document.querySelector(".gg-close-r");
+
+        touchButton.addEventListener("click", moveCard);
+        close.addEventListener("click", moveCard);
+
+        function moveCard() {
+          card.classList.toggle("active");
+        }
+      </script>
     </header>
   </body>
 </html>
