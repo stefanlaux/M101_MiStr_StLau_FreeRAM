@@ -4,15 +4,15 @@
 }
 body {
     font: 100%/1.5 Arial;
-  background:rgb(10,10,10) !important;
-  color:rgb(235,236,238) !important;
+  background:#3d3d3d ;
+  color:rgb(235,236,238) ;
 }
 .jumbotron{
   margin-bottom:0 !important;
   background:rgba(255,255,255,.9) !important;
 }
 .fluid_container{
-  background:rgb(15,16,18);
+  background:;
 }
 
 .parallax {
@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 300px;
-    background:rgb(20,20,20);
+    background:#3d3d3d;
 }
 .parallax__group {
     height: 260px;
