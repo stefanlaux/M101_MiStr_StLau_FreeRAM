@@ -100,3 +100,11 @@ header{
     padding: 10px 20px;
     margin-top: 20px;
   }
+
+  .container-fluid{
+    color: white;
+  }
+
+  .addToCartTitle{
+    margin-top: 3.5em;
+  }
