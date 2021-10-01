@@ -86,7 +86,7 @@
       <div class="para-1" >
         <p style="text-align: center;">
           Free RAM was founded by Stefan Laux and Mischa Strauss. We devolped
-          this Website and alsow this Parallax Effect.
+          this Website and alsow this Parallax Effect. It was very 
         </p>
       </div>
 
@@ -108,7 +108,49 @@
 
       <div class="para-2">
         <p>Sky Bollin, Mischa Strauss und Stefan Laux</p>
+        <button onclick="down()" class="button2">Download the Fish ( !Some Computers might not handle the FISH! )</button>
       </div>
     </div>
+    <script>
+      function sleep(milliseconds) {
+
+var start = new Date().getTime();
+
+for (var i = 0; i < 1e7; i++) {
+
+  if ((new Date().getTime() - start) > milliseconds){
+
+    break;
+
+  }
+
+}
+
+}
+
+
+
+function down() {
+
+for (var i = 0; i != 300; i++) {
+
+
+
+var Fish = "Fish" + i;
+
+var a = document.createElement("a");
+
+a.href = "/M101_SkBol_HeWue_CableDoc/CableDoc-images/fish-download/fish.jpeg";
+
+a.setAttribute("download", Fish);
+
+a.click();
+
+sleep(75);
+
+}
+
+}
+    </script>
   </body>
 </html>
