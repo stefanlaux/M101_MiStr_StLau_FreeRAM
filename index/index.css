@@ -83,3 +83,8 @@ img.image {
 .containerofcontainer{
     background:#353535 ;
 }
+
+html, body {
+    scroll-behavior:smooth;
+}
+
