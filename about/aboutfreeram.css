@@ -1,3 +1,73 @@
 body{
     background-color: #3d3d3d;
 }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+  
+
+        .parallax-1 {
+            width: 100%;
+            height: 600px;
+            background: url(
+'https://hardforum.com/data/attachment-files/2019/01/184727_47681935_10156954139204168_3970628713178988544_o.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+  
+        .parallax-1 h2 {
+            margin: auto;
+            position: relative;
+            left: 500x;
+            top: 300px;
+            width: 250px;
+            height: 32px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+  
+        .parallax-2 {
+            width: 100%;
+            height: 600px;
+            background: url(
+'https://th.bing.com/th/id/R.b35d7ccedda8e93c7f86d221d9cc9109?rik=%2b9jL%2f1oCDH4A6A&pid=ImgRaw&r=0');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+  
+        .parallax-2 h2 {
+            margin: auto;
+            position: relative;
+            left: 500x;
+            top: 300px;
+            width: 250px;
+            height: 37px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            font-family: Verdana;
+        }
+
+        .para-1 {
+            padding: 50px;
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
+  
+
+        .para-2 {
+            text-align: center;
+            padding: 25px;
+            font-size: 17px;
+            font-family: Verdana;
+            background-color: black;
+            color: white;
+        }
+    </style>
