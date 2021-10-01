@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="../JavaScript/searchbar.js" />
   </head>
-  <body>
+  <body onload="checkCookie()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index/index.html">FreeRAM |</a>
@@ -107,7 +107,7 @@
                       This Website is made and developed by Mischa Strauss and
                       Stefan Laux. This is our first HTML group project, which
                       is making a WebShop. We are both apprentices, doing their
-                      first year in NoserYoung (eptember 2021).
+                      first year in NoserYoung (September 2021).
                     </p>
                   </div>
 
@@ -117,8 +117,8 @@
                       This Website is built using
                       <a
                         href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
-                        >Bootstrap</a
-                      >, which means, that everything is made to be responsive
+                        >Bootstrap,</a
+                      > which means, that everything is made to be responsive
                       and act correspondingly to the screen size.
                     </p>
                     <p>SAY WHAT!</p>
@@ -127,7 +127,7 @@
 
                 <div class="row">
                   <div class="col-sm-4">
-                    <h1>Why free Hardware?</h1>
+                    <h1>Why free Hardware / Software?</h1>
                     <p>
                       We have found, that many people in this world need to pay
                       alot of money to get things like RAM or graphics cards, so
@@ -138,7 +138,7 @@
                     </p>
                   </div>
                   <div class="col-sm-4">
-                    <h1>Are the dowbloads malware?</h1>
+                    <h1>Are the downloads malware?</h1>
                     <p>
                       We have ensured, that the products from this website are
                       100% malware free. This is to gain our customer's trust,
@@ -150,9 +150,9 @@
                   <div class="col-sm-4">
                     <h1>Shrek 5?</h1>
                     <p>
-                      we very much hope, that Shrek 5 is in the making, because
+                      We very much hope, that Shrek 5 is in the making, because
                       we would love to see this movie together. Other than that,
-                      We do like to watch anime (especially Stefan). Anime helps
+                      we do like to watch anime (especially Stefan). Anime helps
                       us to detach from reality, which can be very helpful in
                       hard times. Although, most of our freetime is spent on the
                       computer, since we are already employed and are "forced"
@@ -193,5 +193,41 @@
         </div>
       </div>
     </div>
+    <script>
+      function setCookie(cname,cvalue,exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      
+      function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+          alert("Welcome again " + user);
+        } else {
+           user = prompt("Please enter your name:","");
+           if (user != "" && user != null) {
+             setCookie("username", user, 30);
+           }
+        }
+      }
+      </script>
   </body>
 </html>
