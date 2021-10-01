@@ -30,8 +30,9 @@
     />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="../JavaScript/searchbar.js" />
+    <link rel="stylesheet" href="../cursor.css">
   </head>
-  <body onload="checkCookie()">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index/index.html">FreeRAM |</a>
@@ -87,7 +88,7 @@
       <div class="parallax">
         <div id="group1" class="parallax__group">
           <div class="parallax__layer parallax__layer--back">
-            <img class="image" src="../Images/inabakumori.png" alt="Frame of inabakumori: rainy Boots" />
+            <img class="image" src="../Images/inabakumori.png" alt="Frame from the music video: Inabakumori | Rainy Boots">
           </div>
         </div>
 
@@ -193,41 +194,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function setCookie(cname,cvalue,exdays) {
-        const d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        let expires = "expires=" + d.toGMTString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      }
-      
-      function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-      
-      function checkCookie() {
-        let user = getCookie("username");
-        if (user != "") {
-          alert("Welcome again " + user);
-        } else {
-           user = prompt("Please enter your name:","");
-           if (user != "" && user != null) {
-             setCookie("username", user, 30);
-           }
-        }
-      }
-      </script>
+    
   </body>
 </html>
