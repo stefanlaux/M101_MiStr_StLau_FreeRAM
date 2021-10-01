@@ -5,15 +5,15 @@
 body {
     font: 100%/1.5 Arial;
   background:#3d3d3d ;
-  color:rgb(0, 0, 0) ;
+  color:rgb(255, 255, 255) ;
 }
 .jumbotron{
   margin-bottom:0 !important;
   background:rgba(100, 100, 100, 0.9) !important;
 }
-.fluid_container{
-  background:;
-}
+/* .fluid_container{
+  background: ;
+} */
 
 .parallax {
     height: 100vh;
@@ -74,10 +74,10 @@ img.image {
 
 .container{
     background: #353535;
-    padding-left: ;
-    padding-right:  ;    
+    /* padding-left: ; */
+    /* padding-right:  ;     */
     padding-top: 2em;
-    margin: ; 
+    /* margin: ;  */
 }
 
 .containerofcontainer{
